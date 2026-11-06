@@ -67,4 +67,35 @@ export const STACKS: StackDef[] = [
     },
     Component: lazy(() => import('./lexical/LexicalStack')),
   },
+  {
+    slug: 'tiptap-markdown',
+    name: 'Tiptap + Markdown',
+    editor: 'Tiptap 3 + @tiptap/markdown',
+    storage: 'Markdown + directives',
+    renderer: 'react-markdown + remark-directive (same as Markdown stack)',
+    customNodes:
+      'Same Tiptap nodes as the Tiptap stack, plus markdownTokenizer / parseMarkdown / renderMarkdown hooks per node',
+    mobile: {
+      mobileWeb: 'Works (ProseMirror).',
+      reactNativeEditor: '10tap-editor (Tiptap in a WebView); add the Markdown extension and the same node hooks.',
+      nativeRendering:
+        'Same as the Markdown stack: native markdown renderers everywhere; directives and ==highlight== need a custom rule per renderer.',
+    },
+    Component: lazy(() => import('./tiptap-markdown/TiptapMarkdownStack')),
+  },
+  {
+    slug: 'blocknote',
+    name: 'BlockNote',
+    editor: 'BlockNote (Notion-style blocks, on Tiptap)',
+    storage: 'BlockNote block JSON',
+    renderer: 'Custom JSON → React walker',
+    customNodes: 'createReactInlineContentSpec; SuggestionMenuController per trigger (@ mention, ^ cite)',
+    mobile: {
+      mobileWeb: 'Works; block drag handles and side menu are hover-oriented, so less natural on touch.',
+      reactNativeEditor: 'No RN package. WebView or Expo DOM component.',
+      nativeRendering:
+        'No official native renderer. Block JSON is regular (blocks → inline content), so a custom walker is simple.',
+    },
+    Component: lazy(() => import('./blocknote/BlockNoteStack')),
+  },
 ]

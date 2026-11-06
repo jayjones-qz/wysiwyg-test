@@ -412,3 +412,31 @@ img,
   padding: 8px 12px;
   color: var(--muted);
 }
+
+/* ---- BlockNote ---- */
+.toolbar__hint {
+  align-self: center;
+  margin-right: auto;
+  font-size: 12px;
+  color: var(--muted);
+}
+.toolbar__hint kbd {
+  font: 11px var(--mono);
+  padding: 0 4px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--panel);
+}
+.bn-content {
+  padding: 8px 0;
+}
+.bn-r-children {
+  margin-left: 24px;
+}
+figure {
+  margin: 1em 0;
+}
+figcaption {
+  font-size: 13px;
+  color: var(--muted);
+}
