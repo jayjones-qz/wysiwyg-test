@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="220" viewBox="0 0 560 220" font-family="system-ui, sans-serif">
+  <rect width="560" height="220" rx="12" fill="#f7f7fa" stroke="#e3e4ea"/>
+  <rect x="40" y="70" width="150" height="70" rx="8" fill="#eef0ff" stroke="#4255ff"/>
+  <text x="115" y="111" text-anchor="middle" font-size="16" fill="#1f2330">Your code</text>
+  <rect x="370" y="70" width="150" height="70" rx="8" fill="#e3f5f1" stroke="#0f7b6c"/>
+  <text x="445" y="111" text-anchor="middle" font-size="16" fill="#1f2330">My code</text>
+  <path d="M190 105 H370" stroke="#6b7080" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="280" y="96" text-anchor="middle" font-size="13" fill="#6b7080">a vast distance</text>
+  <text x="280" y="190" text-anchor="middle" font-size="13" fill="#6b7080" font-style="italic">Fig. 1 — Drawn in 30 seconds. Obviously.</text>
+</svg>
